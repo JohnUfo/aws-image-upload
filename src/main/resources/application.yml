@@ -12,7 +12,6 @@ cors:
 aws:
   region: eu-north-1
   s3:
-    mock: false
     buckets:
       customer: awsimageupload-v1
 

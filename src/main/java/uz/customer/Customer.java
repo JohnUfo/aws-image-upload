@@ -44,6 +44,14 @@ public class Customer implements UserDetails {
     @Column(unique = true)
     private String profileImageId;
 
+    public Customer(String name, String email, String password, Integer age, Gender gender) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.age = age;
+        this.gender = gender;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));
